@@ -59,10 +59,10 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
   };
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl p-6 text-white shadow-lg">
+    <div className="bg-gradient-to-r from-green-700 to-green-800 rounded-xl p-6 text-white shadow-lg">
       <h2 className="text-xl font-semibold mb-6">Οικονομική Επισκόπηση</h2>
       
-      <div className="space-y-3 mb-6 text-indigo-200">
+      <div className="space-y-2 mb-6 text-white text-opacity-100">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4" />
           <span>{activeDays} Ενεργές ημέρες ανά εβδομάδα </span>
