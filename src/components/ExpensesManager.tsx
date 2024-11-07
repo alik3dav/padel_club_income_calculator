@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, Trash2 } from 'lucide-react';
+import { Trash2 } from 'lucide-react';
 
 export interface Expense {
   id: string;
