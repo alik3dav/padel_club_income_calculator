@@ -98,10 +98,10 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
             <span className="text-lg">Καθαρό Κέρδος</span>
           </div>
           <div className="space-y-3">
-            <div className="flex justify-between items-center">
+            {/* <div className="flex justify-between items-center">
               <span>Ημερησίως</span>
               <span className="text-xl font-medium">€ {netIncome.daily.toLocaleString()}</span>
-            </div>
+            </div> */}
             <div className="flex justify-between items-center">
               <span>Εβδομαδιαίως</span>
               <span className="text-xl font-medium">€ {netIncome.weekly.toLocaleString()}</span>
