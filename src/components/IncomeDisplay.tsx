@@ -59,7 +59,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg">
+    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl p-6 text-white shadow-lg">
       <h2 className="text-xl font-semibold mb-6">Οικονομική Επισκόπηση</h2>
       
       <div className="space-y-3 mb-6 text-indigo-200">
