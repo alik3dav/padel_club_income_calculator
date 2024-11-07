@@ -30,7 +30,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
 
   const calculateTotalExpenses = () => {
     return expenses.reduce((total, expense) => {
-      if (expense.frequency === 'monthly') {
+      if (expense.frequency === 'Μηνιαίο') {
         return total + (expense.amount * 12);
       }
       return total + expense.amount;
@@ -39,7 +39,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
 
   const calculateMonthlyExpenses = () => {
     return expenses.reduce((total, expense) => {
-      if (expense.frequency === 'yearly') {
+      if (expense.frequency === 'Ετήσιο') {
         return total + (expense.amount / 12);
       }
       return total + expense.amount;
@@ -60,16 +60,16 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
 
   return (
     <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg">
-      <h2 className="text-xl font-semibold mb-6">Financial Overview</h2>
+      <h2 className="text-xl font-semibold mb-6">Οικονομική Επισκόπηση</h2>
       
       <div className="space-y-3 mb-6 text-indigo-200">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4" />
-          <span>{activeDays} active days per week</span>
+          <span>{activeDays} Ενεργές ημέρες ανά εβδομάδα </span>
         </div>
         <div className="flex items-center gap-2">
           <Clock className="w-4 h-4" />
-          <span>{totalActiveSlots} slots ({totalActiveHours} hours) per week</span>
+          <span>{totalActiveSlots} Θέσεις ({totalActiveHours} ώρες) ανά εβδομάδα</span>
         </div>
       </div>
       
@@ -78,40 +78,40 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
           <div>
             <div className="flex items-center gap-2 mb-1">
               <TrendingUp className="w-4 h-4 text-green-300" />
-              <span className="text-sm">Gross Income</span>
+              <span className="text-sm">Ακαθάριστο Εισόδημα</span>
             </div>
-            <p className="text-2xl font-bold">${income.monthly.toLocaleString()}/mo</p>
+            <p className="text-2xl font-bold">€{income.monthly.toLocaleString()} μήνα</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-1">
               <TrendingDown className="w-4 h-4 text-red-300" />
-              <span className="text-sm">Expenses</span>
+              <span className="text-sm">Έξωδα</span>
             </div>
-            <p className="text-2xl font-bold">${monthlyExpenses.toLocaleString()}/mo</p>
+            <p className="text-2xl font-bold">€{monthlyExpenses.toLocaleString()} μήνα</p>
           </div>
         </div>
 
         <div className="border-t border-indigo-500 pt-4">
           <div className="flex items-center gap-2 mb-2">
             <DollarSign className="w-4 h-4" />
-            <span className="text-lg">Net Profit</span>
+            <span className="text-lg">Καθαρό Κέρδος</span>
           </div>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
-              <span>Daily</span>
-              <span className="text-xl font-bold">${netIncome.daily.toLocaleString()}</span>
+              <span>Ημερησίως</span>
+              <span className="text-xl font-bold">€{netIncome.daily.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span>Weekly</span>
-              <span className="text-xl font-bold">${netIncome.weekly.toLocaleString()}</span>
+              <span>Εβδομαδιαίως</span>
+              <span className="text-xl font-bold">€{netIncome.weekly.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span>Monthly</span>
-              <span className="text-xl font-bold">${netIncome.monthly.toLocaleString()}</span>
+              <span>Μηνιαίως</span>
+              <span className="text-xl font-bold">€{netIncome.monthly.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center pt-2">
-              <span>Yearly</span>
-              <span className="text-2xl font-bold">${netIncome.yearly.toLocaleString()}</span>
+              <span>Ετησίως</span>
+              <span className="text-2xl font-bold">€{netIncome.yearly.toLocaleString()}</span>
             </div>
           </div>
         </div>

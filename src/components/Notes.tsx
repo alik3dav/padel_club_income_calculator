@@ -6,15 +6,15 @@ export function Notes() {
     <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-600">
       <div className="flex items-center gap-2 mb-2">
         <Info className="w-4 h-4 text-gray-500" />
-        <p className="font-medium">Important Notes:</p>
+        <p className="font-medium">Σημαντικές Σημειώσεις:</p>
       </div>
       <ul className="list-disc list-inside space-y-1 ml-1">
-        <li>Each session is 1 hour and 30 minutes</li>
-        <li>Select time slots individually for each day</li>
-        <li>Calculations are based on selected time slots only</li>
-        <li>Monthly calculations use 4.33 weeks average</li>
-        <li>Monthly expenses from yearly items are averaged</li>
-        <li>Actual income may vary based on occupancy rates</li>
+        <li>Κάθε συνεδρία είναι 1 ώρα και 30 λεπτά</li>
+        <li>Επιλέξτε χρονικές θέσεις ξεχωριστά για κάθε ημέρα</li>
+        <li>Οι υπολογισμοί βασίζονται μόνο στις επιλεγμένες χρονικές θέσεις.</li>
+        <li>Οι μηνιαίοι υπολογισμοί χρησιμοποιούν τον μέσο όρο των 4,33 εβδομάδων.</li>
+        <li>Τα μηνιαία έξοδα από ετήσια αντικείμενα υπολογίζονται κατά μέσο όρο.</li>
+        <li>Το πραγματικό εισόδημα μπορεί να διαφέρει ανάλογα με τα ποσοστά πληρότητας.</li>
       </ul>
     </div>
   );

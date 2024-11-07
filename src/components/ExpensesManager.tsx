@@ -5,7 +5,7 @@ export interface Expense {
   id: string;
   name: string;
   amount: number;
-  frequency: 'monthly' | 'yearly';
+  frequency: 'Μηνιαίο' | 'Ετήσιο';
 }
 
 interface ExpensesManagerProps {
@@ -17,7 +17,7 @@ interface ExpensesManagerProps {
 export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: ExpensesManagerProps) {
   const [name, setName] = React.useState('');
   const [amount, setAmount] = React.useState('');
-  const [frequency, setFrequency] = React.useState<'monthly' | 'yearly'>('monthly');
+  const [frequency, setFrequency] = React.useState<'Μηνιαίο' | 'Ετήσιο'>('Μηνιαίο');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-4">
-      <h3 className="text-lg font-semibold text-gray-800 mb-4">Expenses</h3>
+      <h3 className="text-lg font-semibold text-gray-800 mb-4">Έξωδα</h3>
       
       <form onSubmit={handleSubmit} className="mb-4 space-y-3">
         <div className="grid grid-cols-2 gap-2">
@@ -42,14 +42,14 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Expense name"
+            placeholder="Όνομα εξόδου"
             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
           />
           <input
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            placeholder="Amount"
+            placeholder="Ποσό"
             min="0"
             step="0.01"
             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
@@ -58,11 +58,11 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
         <div className="flex gap-2">
           <select
             value={frequency}
-            onChange={(e) => setFrequency(e.target.value as 'monthly' | 'yearly')}
+            onChange={(e) => setFrequency(e.target.value as 'Μηνιαίο' | 'Ετήσιο')}
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
           >
-            <option value="monthly">Monthly</option>
-            <option value="yearly">Yearly</option>
+            <option value="monthly">Μηνιαίο</option>
+            <option value="yearly">Ετήσιο</option>
           </select>
           <button
             type="submit"
@@ -82,7 +82,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             <div>
               <p className="font-medium text-gray-800">{expense.name}</p>
               <p className="text-sm text-gray-600">
-                ${expense.amount.toLocaleString()} / {expense.frequency}
+              €{expense.amount.toLocaleString()} / {expense.frequency}
               </p>
             </div>
             <button
@@ -94,7 +94,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
           </div>
         ))}
         {expenses.length === 0 && (
-          <p className="text-center text-gray-500 py-2">No expenses added yet</p>
+          <p className="text-center text-gray-500 py-2">Δεν έχουν προστεθεί έξοδα ακόμη</p>
         )}
       </div>
     </div>

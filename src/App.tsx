@@ -32,18 +32,18 @@ const DEFAULT_TIME_SLOTS: TimeSlot[] = [
 ];
 
 const DAYS = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
+  'Δευτέρα',
+  'Τρίτη',
+  'Τετάρτη',
+  'Πέμπτη',
+  'Παρασκευή',
+  'Σάββατο',
+  'Κυριακή',
 ];
 
 function App() {
   const [courts, setCourts] = useState<number>(1);
-  const [pricePerSession, setPricePerSession] = useState<number>(30);
+  const [pricePerSession, setPricePerSession] = useState<number>(48);
   const [schedule, setSchedule] = useState<DaySchedule>(() => {
     const initialSchedule: DaySchedule = {};
     DAYS.forEach(day => {
@@ -97,26 +97,26 @@ function App() {
   }, [courts, pricePerSession, schedule]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 p-6">
+      <div className="max-w-8xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex items-center gap-3 mb-8">
             <Calculator className="w-8 h-8 text-indigo-600" />
-            <h1 className="text-3xl font-bold text-gray-800">Padel Court Income Calculator</h1>
+            <h1 className="text-2xl font-bold text-gray-800">Υπολογιστής Εισοδήματος Γηπέδου Πάντελ</h1>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-6">
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 <InputField
-                  label="Number of Courts"
+                  label="Αριθμός Γηπέδων"
                   icon={LayoutGrid}
                   value={courts}
                   onChange={setCourts}
                   min={1}
                 />
                 <InputField
-                  label="Price per Session (1:30 hours)"
+                  label="Τιμή ανά Συνεδρία (1:30 ώρες)"
                   icon={DollarSign}
                   value={pricePerSession}
                   onChange={setPricePerSession}
@@ -131,7 +131,7 @@ function App() {
               />
 
               <div className="space-y-4">
-                <h2 className="text-xl font-semibold text-gray-800">Schedule Configuration</h2>
+                <h2 className="text-xl font-semibold text-gray-800">Διαμόρφωση Ωραρίου</h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {DAYS.map(day => (
                     <TimeSlotSelector

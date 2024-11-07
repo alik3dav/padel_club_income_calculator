@@ -22,7 +22,7 @@ export function TimeSlotSelector({ day, slots, onToggleSlot }: TimeSlotSelectorP
           <h3 className="font-medium text-gray-700">{day}</h3>
         </div>
         <span className="text-sm text-gray-500">
-          {slots.filter(slot => slot.selected).length} slots selected
+          {slots.filter(slot => slot.selected).length} Επιλεγμένες θέσεις
         </span>
       </div>
       <div className="p-4 grid grid-cols-2 gap-2">
@@ -41,7 +41,7 @@ export function TimeSlotSelector({ day, slots, onToggleSlot }: TimeSlotSelectorP
               w-full p-3 text-sm rounded-md border transition-all
               peer-checked:bg-indigo-50 peer-checked:border-indigo-500 peer-checked:text-indigo-700
               peer-checked:font-medium
-              ${slot.selected ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 hover:bg-gray-50'}
+              €{slot.selected ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 hover:bg-gray-50'}
             `}>
               {slot.start} - {slot.end}
             </div>
