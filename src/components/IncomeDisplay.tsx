@@ -92,7 +92,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
           </div>
         </div>
 
-        <div className="border-t border-indigo-500 pt-4">
+        <div className="border-t pt-4" style={{ borderTopColor: 'rgba(255, 255, 255, 0.2)' }}>
           <div className="flex items-center gap-2 mb-2">
             <DollarSign className="w-4 h-4" />
             <span className="text-lg">Καθαρό Κέρδος</span>
@@ -100,19 +100,19 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <span>Ημερησίως</span>
-              <span className="text-xl font-bold">€{netIncome.daily.toLocaleString()}</span>
+              <span className="text-xl font-medium">€ {netIncome.daily.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center">
               <span>Εβδομαδιαίως</span>
-              <span className="text-xl font-bold">€{netIncome.weekly.toLocaleString()}</span>
+              <span className="text-xl font-medium">€ {netIncome.weekly.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center">
               <span>Μηνιαίως</span>
-              <span className="text-xl font-bold">€{netIncome.monthly.toLocaleString()}</span>
+              <span className="text-xl font-medium">€ {netIncome.monthly.toLocaleString()}</span>
             </div>
             <div className="flex justify-between items-center pt-2">
               <span>Ετησίως</span>
-              <span className="text-2xl font-bold">€{netIncome.yearly.toLocaleString()}</span>
+              <span className="text-2xl font-bold">€ {netIncome.yearly.toLocaleString()}</span>
             </div>
           </div>
         </div>
