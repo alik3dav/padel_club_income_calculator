@@ -21,7 +21,7 @@ export function InputField({ label, icon: Icon, value, onChange, min }: InputFie
         min={min}
         value={value}
         onChange={(e) => onChange(Math.max(min, parseInt(e.target.value) || min))}
-        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
+        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
       />
     </div>
   );

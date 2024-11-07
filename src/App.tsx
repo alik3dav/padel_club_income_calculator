@@ -101,13 +101,13 @@ function App() {
       <div className="max-w-8xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex items-center gap-3 mb-8">
-            <Calculator className="w-8 h-8 text-indigo-600" />
+            <Calculator className="w-8 h-8 text-gray-600" />
             <h1 className="text-2xl font-bold text-gray-800">Υπολογισμός Εισοδήματος Γηπέδων Πάντελ</h1>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            <div className="lg:col-span-2 space-y-4">
+              <div className="grid sm:grid-cols-2 gap-6 mb-2">
                 <InputField
                   label="Αριθμός Γηπέδων"
                   icon={LayoutGrid}

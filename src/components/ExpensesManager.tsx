@@ -33,8 +33,8 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
   };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-4">
-      <h3 className="text-lg font-semibold text-gray-800 mb-4">Έξωδα</h3>
+    <div className="bg-white rounded-lg border border-gray-200 pl-4 pr-4 pt-2 pb-2">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Έξωδα</h3>
       
       <form onSubmit={handleSubmit} className="mb-4 space-y-3">
         <div className="grid grid-cols-2 gap-2">
@@ -61,8 +61,8 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             onChange={(e) => setFrequency(e.target.value as 'Μηνιαίο' | 'Ετήσιο')}
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
           >
-            <option value="monthly">Μηνιαίο</option>
-            <option value="yearly">Ετήσιο</option>
+            <option value="Μηνιαίο">Μηνιαίο</option>
+            <option value="Ετήσιο">Ετήσιο</option>
           </select>
           <button
             type="submit"
