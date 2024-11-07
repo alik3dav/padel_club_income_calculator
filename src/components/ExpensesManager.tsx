@@ -66,7 +66,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
           </select>
           <button
             type="submit"
-            className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
+            className="px-4 py-2 bg-gradient-to-r from-black to-black text-white rounded-md hover:bg-grey-700 transition-colors"
           >
             Add
           </button>
