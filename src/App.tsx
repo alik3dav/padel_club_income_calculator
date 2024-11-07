@@ -102,7 +102,7 @@ function App() {
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex items-center gap-3 mb-8">
             <Calculator className="w-8 h-8 text-indigo-600" />
-            <h1 className="text-2xl font-bold text-gray-800">Υπολογιστής Εισοδήματος Γηπέδου Πάντελ</h1>
+            <h1 className="text-2xl font-bold text-gray-800">Υπολογισμός Εισοδήματος Γηπέδων Πάντελ</h1>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
