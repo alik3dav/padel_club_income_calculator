@@ -61,7 +61,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
 
   return (
     <div className="bg-gradient-to-r from-sky-500 to-indigo-500 rounded-xl p-6 text-white shadow-lg">
-      <h2 className="text-xl font-semibold mb-6">Οικονομική Επισκόπηση</h2>
+      <h2 className="text-lg font-bold mb-6">Οικονομική Επισκόπηση</h2>
       
       <div className="space-y-2 mb-6 text-white text-opacity-100">
         <div className="flex items-center gap-2">
@@ -74,17 +74,17 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
         </div>
       </div>
       
-      <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-4 p-4 bg-white/10 rounded-lg mb-4">
+      <div className="space-y-2">
+        <div className="grid grid-cols-1 gap-4 p-4 bg-white/20 rounded-lg mb-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex items-center gap-1 mb-1">
               <TrendingUp className="w-4 h-4 text-green-300" />
               <span className="text-sm">Ακαθάριστο Εισόδημα</span>
             </div>
             <p className="text-2xl font-bold">€ {income.monthly.toLocaleString()} μήνα</p>
           </div>
           <div>
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex items-center gap-1 mb-1">
               <TrendingDown className="w-4 h-4 text-red-300" />
               <span className="text-sm">Έξωδα</span>
             </div>
@@ -93,9 +93,9 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
         </div>
 
         <div className="border-t pt-4" style={{ borderTopColor: 'rgba(255, 255, 255, 0.2)' }}>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-4">
             <DollarSign className="w-4 h-4" />
-            <span className="text-lg">Καθαρό Κέρδος</span>
+            <span className="text-lg font-bold">Καθαρό Κέρδος</span>
           </div>
           <div className="space-y-3">
             {/* <div className="flex justify-between items-center">
