@@ -80,14 +80,14 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
               <TrendingUp className="w-4 h-4 text-green-300" />
               <span className="text-sm">Ακαθάριστο Εισόδημα</span>
             </div>
-            <p className="text-2xl font-bold">€{income.monthly.toLocaleString()} μήνα</p>
+            <p className="text-2xl font-bold">€ {income.monthly.toLocaleString()} μήνα</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-1">
               <TrendingDown className="w-4 h-4 text-red-300" />
               <span className="text-sm">Έξωδα</span>
             </div>
-            <p className="text-2xl font-bold">€{monthlyExpenses.toLocaleString()} μήνα</p>
+            <p className="text-2xl font-bold">€ {monthlyExpenses.toLocaleString()} μήνα</p>
           </div>
         </div>
 

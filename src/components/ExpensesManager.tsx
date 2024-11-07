@@ -82,7 +82,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             <div>
               <p className="font-medium text-gray-800">{expense.name}</p>
               <p className="text-sm text-gray-600">
-              €{expense.amount.toLocaleString()} / {expense.frequency}
+              € {expense.amount.toLocaleString()} / {expense.frequency}
               </p>
             </div>
             <button
