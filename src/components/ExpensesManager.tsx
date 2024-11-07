@@ -42,7 +42,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Όνομα εξόδου"
+            placeholder="Όνομα δαπάνης"
             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
           />
           <input
