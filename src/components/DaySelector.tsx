@@ -20,7 +20,7 @@ export function DaySelector({ selectedDays, onToggleDay }: DaySelectorProps) {
   return (
     <div className="bg-white rounded-lg border border-gray-200">
       <div className="flex items-center gap-2 p-4 border-b border-gray-200">
-        <Calendar className="w-5 h-5 text-indigo-500" />
+        <Calendar className="w-5 h-5 text-gray-500" />
         <h3 className="font-medium text-gray-700">Operating Days</h3>
       </div>
       <div className="p-4 space-y-2">
