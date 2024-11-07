@@ -31,7 +31,7 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
   const calculateTotalExpenses = () => {
     return expenses.reduce((total, expense) => {
       if (expense.frequency === 'Μηνιαίο') {
-        return total + (expense.amount * 12);
+        return total + (expense.amount) * 12;
       }
       return total + expense.amount;
     }, 0);
@@ -39,17 +39,18 @@ export function IncomeDisplay({ income, schedule, expenses }: IncomeDisplayProps
 
   const calculateMonthlyExpenses = () => {
     return expenses.reduce((total, expense) => {
-      if (expense.frequency === 'Ετήσιο') {
-        return total + (expense.amount / 12);
+      if (expense.frequency === 'Μηνιαίο') {
+        return total + expense.amount;
       }
-      return total + expense.amount;
-    }, 0);
+      return total + expense.amount / 12;
+    }, 0).toFixed(2);
   };
+  
 
   const yearlyExpenses = calculateTotalExpenses();
   const monthlyExpenses = calculateMonthlyExpenses();
-  const weeklyExpenses = monthlyExpenses / 4.33;
-  const dailyExpenses = weeklyExpenses / 7;
+  const weeklyExpenses = ( monthlyExpenses / 4.33 ).toFixed(2);
+  const dailyExpenses = ( weeklyExpenses / 7 ).toFixed(2);
 
   const netIncome = {
     daily: income.daily - dailyExpenses,

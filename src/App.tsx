@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calculator } from 'lucide-react';
 import { InputField } from './components/InputField';
 import { IncomeDisplay } from './components/IncomeDisplay';
