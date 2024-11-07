@@ -97,7 +97,7 @@ function App() {
   }, [courts, pricePerSession, schedule]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black to-gray-700 p-6">
+    <div className="min-h-screen bg-gradient-to-r from-sky-800 to-indigo-800 p-3">
       <div className="max-w-8xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex items-center gap-3 mb-8">
