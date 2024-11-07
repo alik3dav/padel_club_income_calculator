@@ -13,7 +13,7 @@ export function InputField({ label, icon: Icon, value, onChange, min }: InputFie
   return (
     <div>
       <label className="flex items-center gap-2 text-lg font-medium text-gray-700 mb-2">
-        <Icon className="w-5 h-5 text-indigo-500" />
+        <Icon className="w-5 h-5" />
         {label}
       </label>
       <input
