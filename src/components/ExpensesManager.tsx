@@ -68,7 +68,7 @@ export function ExpensesManager({ expenses, onAddExpense, onRemoveExpense }: Exp
             type="submit"
             className="px-4 py-2 bg-gradient-to-r from-black to-black text-white rounded-md hover:bg-grey-700 transition-colors"
           >
-            Προσθήκη
+            Προσθήκη 
           </button>
         </div>
       </form>
