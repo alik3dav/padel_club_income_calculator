@@ -6,7 +6,9 @@ import { Notes } from './components/Notes';
 import { TimeSlotSelector, TimeSlot } from './components/TimeSlotSelector';
 import { ExpensesManager, Expense } from './components/ExpensesManager';
 import { DollarSign, LayoutGrid } from 'lucide-react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
 
 interface CalculationResult {
   daily: number;
