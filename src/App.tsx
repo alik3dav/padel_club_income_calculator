@@ -113,7 +113,7 @@ function App() {
                   icon={LayoutGrid}
                   value={courts}
                   onChange={setCourts}
-                  min={1}
+                  min={0}
                 />
                 <InputField
                   label="Τιμή ανά Συνεδρία (1:30 ώρες)"
